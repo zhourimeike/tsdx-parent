@@ -1,0 +1,28 @@
+
+server:
+  port: 997
+
+spring:
+  application:
+    name: tsdx-works-management-dal
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:996/eureka/
+---
+#数据源配置
+servlet:
+  context-path: /
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/tsdx?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#自定Mapper文件位置
+mybatis:
+  mapperLocations: classpath:mapper/**/*.xml
+
+
