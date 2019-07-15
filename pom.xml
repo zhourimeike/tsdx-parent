@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tsdx</groupId>
+    <artifactId>tsdx-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!--公共的配置，maven工程子模块也一同引用-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <!--######################基础服务######################-->
+        <!--util:通用工具-->
+        <module>tsdx-common-util</module>
+        <!--服务注册中心-->
+        <module>tsdx-register</module>
+        <!--路由网关-->
+        <module>tsdx-gateway</module>
+        <!--facade:子系统统一调用服务（为视频，音频，图文等模块提供调用入口）-->
+        <module>tsdx-base-facade</module>
+        <!--任务调度服务-->
+        <module>tsdx-task</module>
+        <!--passport:登录中心(单点登录处理中心)    分层：dal,service,web-->
+        <module>tsdx-passport</module>
+        <!--数据同步:数据最终一致性保证   分层：dal,service,web-->
+        <module>tsdx-data-sync</module>
+        <!--文件存储服务:音频，视频，图片等文件存取服务   分层：dal,service,web-->
+        <module>tsdx-files-storage</module>
+        <!--内容推荐服务   分层：dal,service,web-->
+        <module>tsdx-feed</module>
+        <!--内容检索服务   分层：dal,service，web-->
+        <module>tsdx-search</module>
+        <!--session缓存服务：基于redis缓存   分层：dal,service，web-->
+        <module>tsdx-session</module>
+
+
+        <!--######################中后台######################-->
+        <!--组织机构&部门&岗位&权限管理   分层：dal,service,web-->
+        <module>tsdx-sys-manager</module>
+        <!--用户管理:用户CRUD，岗位管理，登录认证，违规账号处理等   分层：dal,service,web-->
+        <module>tsdx-user-manager</module>
+        <!--内容管理后台：平台或用户创作内容CRUD,审核，分析，统计，违规内容处理等操作   分层：dal,service,web-->
+        <module>tsdx-content-manager</module>
+
+
+        <!--######################客户端######################-->
+        <!--个人作品管理后台：用户创作内容CRUD,分析，统计等功能   分层：dal,service,web-->
+        <module>tsdx-works-manager</module>
+        <!--app入口：类似网站index页面   分层：service,web-->
+        <module>tsdx-portal</module>
+        <!--个人信息维护   分层：dal,service,web-->
+        <module>tsdx-user-profile-manager</module>
+        <!--视频内容   分层：dal,service,web-->
+        <module>tsdx-video</module>
+        <!--翻译内容   分层：dal,service,web-->
+        <module>tsdx-translate</module>
+
+    </modules>
+
+</project>

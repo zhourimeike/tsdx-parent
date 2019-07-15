@@ -1,0 +1,13 @@
+package com.tsdx.user.profile.manager;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TsdxUserProfileManagerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TsdxUserProfileManagerApplication.class, args);
+    }
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-register/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-base-facade/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-task/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-passport/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-data-sync/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-files-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-feed/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-search/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-sys-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-user-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-content-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-works-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-portal/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-user-profile-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-video/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-translate/pom.xml" />
+        <option value="$PROJECT_DIR$/tsdx-session/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
